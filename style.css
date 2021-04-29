@@ -1,0 +1,125 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+:root {
+  --white: hsl(0, 0%, 100%);
+  --des-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsla(285, 55%, 62%, 0.514);
+  --trans-white: hsla(0, 0%, 100%, 0.75);
+  --accent: hsl(277, 64%, 61%);
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 15px;
+  color: #fff;
+  position: relative;
+}
+
+.card {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 400px;
+  background-color: var(--des-blue);
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.card section.left-section,
+.card section.right-section {
+  width: 50%;
+  height: 100%;
+}
+
+.card section.left-section .info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 60px auto;
+}
+
+.card section.left-section h1.hook {
+  color: var(--white);
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.card section.left-section h1.hook span {
+  color: var(--accent);
+}
+
+.card section.left-section .info p.description {
+  line-height: 1.6;
+  color: var(--white);
+  width: 85%;
+  font-size: 1rem;
+  margin-top: 30px;
+  font-family: Inter;
+}
+
+.card section.left-section .stats {
+  display: flex;
+  gap: 35px;
+  margin-top: 40px;
+}
+
+.card section.left-section .stats .company-stats h3,
+.card section.left-section .stats .templates-stats h3,
+.card section.left-section .stats .queries-stats h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-family: Inter;
+  margin: 15px 0;
+}
+
+.card section.left-section .stats .company-stats span,
+.card section.left-section .stats .templates-stats span,
+.card section.left-section .stats .queries-stats span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Inter;
+}
+
+.card section.right-section .img {
+  height: auto;
+  position: relative;
+}
+
+.card section.right-section .img .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  background-color: var(--soft-violet);
+}
+
+.card section.right-section .img img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  font-family: Inter;
+  font-size: 0.7rem;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
