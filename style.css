@@ -1,125 +1,219 @@
 @import "./reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend&family=Lexend+Deca&display=swap");
 :root {
   --white: hsl(0, 0%, 100%);
-  --des-blue: hsl(244, 38%, 16%);
+  --des-blue: hsl(233, 47%, 7%);
   --soft-violet: hsla(285, 55%, 62%, 0.514);
   --trans-white: hsla(0, 0%, 100%, 0.75);
   --accent: hsl(277, 64%, 61%);
-}
-
-body {
-  background-color: hsl(233, 47%, 7%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  font-size: 15px;
-  color: #fff;
-  position: relative;
-}
-
-.card {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1000px;
-  height: 400px;
-  background-color: var(--des-blue);
-  overflow: hidden;
-  border-radius: 15px;
-}
-
-.card section.left-section,
-.card section.right-section {
-  width: 50%;
-  height: 100%;
-}
-
-.card section.left-section .info {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 60px auto;
-}
-
-.card section.left-section h1.hook {
-  color: var(--white);
-  font-family: Inter;
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.2;
-}
-.card section.left-section h1.hook span {
-  color: var(--accent);
-}
-
-.card section.left-section .info p.description {
-  line-height: 1.6;
-  color: var(--white);
-  width: 85%;
-  font-size: 1rem;
-  margin-top: 30px;
-  font-family: Inter;
-}
-
-.card section.left-section .stats {
-  display: flex;
-  gap: 35px;
-  margin-top: 40px;
-}
-
-.card section.left-section .stats .company-stats h3,
-.card section.left-section .stats .templates-stats h3,
-.card section.left-section .stats .queries-stats h3 {
-  font-size: 1.7rem;
-  font-weight: 700;
-  font-family: Inter;
-  margin: 15px 0;
-}
-
-.card section.left-section .stats .company-stats span,
-.card section.left-section .stats .templates-stats span,
-.card section.left-section .stats .queries-stats span {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: Inter;
-}
-
-.card section.right-section .img {
-  height: auto;
-  position: relative;
-}
-
-.card section.right-section .img .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 5;
-  background-color: var(--soft-violet);
-}
-
-.card section.right-section .img img {
-  object-fit: cover;
-  max-width: 100%;
-  height: auto;
-}
-
-.attribution {
-  position: absolute;
-  bottom: 10px;
-  font-family: Inter;
-  font-size: 0.7rem;
+  --card-bg: hsl(244, 38%, 16%);
+  --main-p: hsla(0, 0%, 100%, 0.75);
+  --stat: hsla(0, 0%, 100%, 0.6);
+  --bg-layer: hsla(277, 89%, 25%, 0.555);
 }
 
 .container {
-  width: 400px;
-  margin: 0 auto;
+  max-width: 340px;
+  height: 100%;
+  padding: 70px;
+}
+
+body {
+  max-width: 1440px;
+  height: 100vh;
+  background: var(--des-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+.card {
+  width: 1000px;
+  height: 400px;
+  background: var(--card-bg);
+  display: flex;
+  border-radius: 5px;
+}
+
+section.info {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+section.info h1.title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+section.info p.description {
+  font-size: 0.85rem;
+  margin-bottom: 75px;
+  font-family: "Lexend Deca";
+  line-height: 1.6;
+  color: var(--main-p);
+}
+
+section.info h1.title .insights {
+  color: var(--accent);
+}
+
+section.info .stats {
+  display: flex;
+}
+section.info .stats .stat {
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+}
+section.info .stats .stat .count {
+  font-size: 1.3rem;
+  font-family: "Lexend Deca";
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+section.info .stats .stat .title {
+  font-size: 0.7rem;
+  font-family: "Lexend Deca";
+  color: var(--stat);
+  text-transform: uppercase;
+}
+section.right {
+  width: 50%;
+}
+
+section.right .img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/image-header-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+section.right .bg-layer {
+  background-color: var(--bg-layer);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile */
+
+/* @media only screen and (max-width: 768px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .container {
+    padding: 0px;
+    width: 100%;
+  }
+  .card {
+    flex-direction: column-reverse;
+    width: 90%;
+    height: 80%;
+    margin: 20px 0;
+    align-items: center;
+  }
+
+  section.info {
+    height: 40%;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  section.right {
+    height: 60%;
+    width: 100%;
+  }
+} */
+
+/* @media only screen and (max-width: 415px) {
+  section.info {
+    height: 50%;
+    margin: 30px 0;
+  }
+
+  section.right {
+    height: 50%;
+  }
+} */
+
+@media only screen and (max-width: 376px) {
+  body {
+    margin: 70px 0;
+    width: 100%;
+  }
+  .container {
+    padding: 0px;
+    width: 100%;
+  }
+  .card {
+    flex-direction: column-reverse;
+    width: 90%;
+    height: 100%;
+    align-items: center;
+  }
+
+  section.info {
+    width: 100%;
+    flex-direction: column;
+    height: 50%;
+    margin: 50px 0;
+  }
+
+  section.info h1.title {
+    text-align: center;
+    font-size: 1.8rem;
+    max-width: 14ch;
+    margin: 0 auto;
+  }
+
+  section.info p.description {
+    text-align: center;
+    max-width: 31ch;
+    margin: 20px auto;
+    line-height: 2;
+  }
+
+  section.right {
+    height: 50%;
+    width: 100%;
+  }
+
+  section.right .img {
+    background-image: url("./images/image-header-mobile.jpg") no-repeat center
+      center/cover;
+    border-radius: 5px;
+  }
+
+  section.info .stats {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  section.info .stats .stat {
+    margin: 0 auto;
+  }
+
+  section.info .stats .stat .count {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  section.info .stats .stat .title {
+    font-size: 0.8rem;
+    text-align: center;
+  }
 }
