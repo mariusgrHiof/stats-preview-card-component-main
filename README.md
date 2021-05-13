@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/mariusgrHiof/stats-preview-card-component-main)
-- Live Site URL: [Add live site URL here](https://pedantic-curie-0c2db6.netlify.app/)
+- Solution URL: [https://github.com/mariusgrHiof/stats-preview-card-component-main](https://github.com/mariusgrHiof/stats-preview-card-component-main)
+- Live Site URL: [https://pedantic-curie-0c2db6.netlify.app/](https://pedantic-curie-0c2db6.netlify.app/)
 
 ## My process
 
