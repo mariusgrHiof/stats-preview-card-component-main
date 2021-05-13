@@ -166,3 +166,12 @@ footer {
     line-height: 1.6;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  section.info h1.title {
+    padding: 0 10px;
+  }
+  footer {
+    margin-top: 20px;
+  }
+}
