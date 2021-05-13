@@ -16,4 +16,5 @@
 .prettierignore
 
 
-*.md
+style-guide.md
+README_copy.md
