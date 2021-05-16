@@ -47,7 +47,6 @@ I started to structure the HTML and then adding CSS. At the end I created media 
 ### What I learned
 
 I've learned how to utilize flexbox to layout my page and make it responsive on tablet and mobile devices.
-To see how you can add code snippets, see below:
 
 ### Continued development
 
